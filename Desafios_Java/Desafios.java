@@ -6,9 +6,8 @@ public class Desafios {
 
 
         Desafios d = new Desafios();
-        d.itens_repetidos("abbcde");
-
-
+        d.itens_repetidos("abcde");
+        d.CalculaMedia(new int[]{10, 20, 30});
     }
     /*
     Conte o número de duplicatas
@@ -61,7 +60,14 @@ Per Wikipedia, a prime number ( or a prime ) is a natural number greater than 1 
         else return false;
     }
 
+    public Integer CalculaMedia(int[] numeros){
 
-
-
+        int soma = 0;
+        for (int i = 0; i < numeros.length; i++){
+            soma += numeros[i];
+        }
+        int media = soma / numeros.length;
+        System.out.println("A média dos números do array é: " + media);
+        return media;
+    }
 }
